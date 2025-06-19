@@ -62,6 +62,10 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.nav-menu a.active {
+  background-color: transparent;
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(102, 126, 234, 0.3)),
@@ -412,4 +416,717 @@ footer {
   .destinations-grid {
     padding: 50px 0;
   }
+}
+
+/* Form Sections */
+.form-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.form-section:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.form-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #667eea;
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.form-section:nth-child(even) form {
+  background: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Fieldset Styling */
+fieldset {
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.02),
+    rgba(118, 75, 162, 0.02)
+  );
+  position: relative;
+}
+
+fieldset:hover {
+  border-color: #764ba2;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+}
+
+legend {
+  font-weight: bold;
+  color: #667eea;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #667eea;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 8px 0;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+  border-color: #764ba2;
+}
+
+/* Radio Button Styling */
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="radio"]:checked {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+input[type="radio"]:hover {
+  border-color: #764ba2;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #667eea;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input[type="checkbox"]:hover {
+  border-color: #764ba2;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+/* Label Styling */
+label {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+label:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+fieldset label {
+  margin: 8px 0;
+}
+
+/* Form Labels (non-fieldset) */
+form > label {
+  display: block;
+  margin: 20px 0 8px 0;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* File Input Styling */
+input[type="file"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px dashed #667eea;
+  border-radius: 10px;
+  background: rgba(102, 126, 234, 0.02);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin: 10px 0;
+}
+
+input[type="file"]:hover {
+  border-color: #764ba2;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+input[type="file"]:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Select Styling */
+select {
+  cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, #667eea 50%),
+    linear-gradient(135deg, #667eea 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+select optgroup {
+  font-weight: bold;
+  color: #667eea;
+  background: #f8f9fa;
+}
+
+select option {
+  padding: 8px;
+  color: #333;
+  background: white;
+}
+
+/* Submit Button Styling */
+button[type="submit"],
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px auto;
+  display: block;
+  min-width: 150px;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+button[type="submit"]:hover,
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+button[type="submit"]:active,
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Input group for "Andere" options */
+label input[type="text"] {
+  margin-left: 10px;
+  max-width: 200px;
+  display: inline-block;
+}
+
+/* Responsive Form Design */
+@media (max-width: 768px) {
+  form {
+    padding: 25px;
+    margin: 0 15px;
+  }
+
+  .form-section h2 {
+    font-size: 2rem;
+  }
+
+  fieldset {
+    padding: 20px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    max-width: 100%;
+  }
+
+  label input[type="text"] {
+    margin-left: 0;
+    margin-top: 10px;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .form-section {
+    padding: 50px 0;
+  }
+}
+
+/* Formulare Page */
+.formulare-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(102, 126, 234, 0.3)),
+    url("./bilder/formulare_bild.png") center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #667eea;
+  text-align: center;
+}
+
+.team-member {
+  margin-bottom: 80px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.member-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.member-content.reverse {
+  grid-template-columns: 1fr 2fr;
+}
+
+.member-content.reverse .member-text {
+  order: 2;
+}
+
+.member-content.reverse .member-image {
+  order: 1;
+}
+
+.member-text h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.member-role {
+  font-size: 1.2rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.member-text h4 {
+  color: #667eea;
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.member-details,
+.member-hobbies,
+.travel-experience {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.member-details li,
+.member-hobbies li {
+  list-style: none;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.member-details li:before {
+  content: "👤";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+.member-hobbies li:before {
+  content: "🎯";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+.travel-experience li {
+  list-style: none;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  color: #555;
+  position: relative;
+  padding-left: 30px;
+  counter-increment: travel-counter;
+}
+
+.travel-experience {
+  counter-reset: travel-counter;
+}
+
+.travel-experience li:before {
+  content: counter(travel-counter);
+  position: absolute;
+  left: 0;
+  top: 0.8rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.member-details li:last-child,
+.member-hobbies li:last-child,
+.travel-experience li:last-child {
+  border-bottom: none;
+}
+
+.member-image {
+  text-align: center;
+}
+
+.member-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.member-image img:hover {
+  transform: scale(1.05);
+}
+
+.image-caption {
+  margin-top: 1rem;
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 80px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05),
+    rgba(118, 75, 162, 0.05)
+  );
+}
+
+.mission-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #667eea;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+}
+
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #667eea;
+}
+
+/* Values Section */
+.values-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.values-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #667eea;
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-item {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.05),
+    rgba(118, 75, 162, 0.05)
+  );
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(102, 126, 234, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(102, 126, 234, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.value-item:hover:before {
+  left: 100%;
+}
+
+.value-item h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.value-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 968px) {
+  .member-content,
+  .member-content.reverse {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .member-content.reverse .member-text,
+  .member-content.reverse .member-image {
+    order: unset;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section,
+  .mission-section,
+  .values-section {
+    padding: 50px 0;
+  }
+
+  .team-member {
+    padding: 25px;
+    margin-bottom: 50px;
+  }
+
+  .member-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .member-role {
+    font-size: 1.1rem;
+  }
+
+  .mission-content p {
+    padding: 20px;
+  }
+
+  .value-item {
+    padding: 20px;
+  }
+
+  .team-section h2,
+  .mission-section h2,
+  .values-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .member-text h4 {
+    font-size: 1.1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-content p {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
+
+/* About us Page */
+.aboutus-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(102, 126, 234, 0.3)),
+    url("./bilder/aboutus_bild.jpg") center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
 }
