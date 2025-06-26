@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocket Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <h1 class="logo">Reiseziele</h1>
+          <div class="burger" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Reiseziele</a></li>
+            <li><a href="about_us.html">Über uns</a></li>
+            <li><a href="formulare.html">Formulare</a></li>
+            <li><a href="gallery.html" class="active">Pocket Gallery</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="gallery-main">
+      <h1 class="gallery-title">Meine Pocket Gallery</h1>
+      <div class="gallery-grid">
+        <img src="bilder/packing_bild.jpg" alt="Bild 1" />
+        <img src="bilder/panama_city.jpg" alt="Bild 2" />
+        <img src="bilder/bali_tempel.jpg" alt="Bild 3" />
+        <img src="bilder/flugzeug_bild.jpg" alt="Bild 4" />
+        <img src="bilder/madeira.jpg" alt="Bild 5" />
+        <img src="bilder/index_bild.jpg" alt="Bild 6" />
+      </div>
+    </main>
+    <script>
+      const burger = document.getElementById("burger-menu");
+      const nav = document.getElementById("nav-menu");
+      burger.onclick = () => nav.classList.toggle("open");
+    </script>
+  </body>
+</html>

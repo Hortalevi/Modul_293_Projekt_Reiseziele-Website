@@ -11,11 +11,17 @@
       <nav>
         <div class="nav-container">
           <h1 class="logo">Reiseziele</h1>
-          <ul class="nav-menu">
+          <div class="burger" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="destinations.html">Reiseziele</a></li>
             <li><a href="about_us.html">Über uns</a></li>
             <li><a href="formulare.html" class="active">Formulare</a></li>
+            <li><a href="gallery.html">Pocket Gallery</a></li>
           </ul>
         </div>
       </nav>
@@ -249,5 +255,10 @@
         <p>&copy; 2025 Meine Traumreiseziele. Mit Liebe zum Reisen erstellt.</p>
       </div>
     </footer>
+    <script>
+      const burger = document.getElementById("burger-menu");
+      const nav = document.getElementById("nav-menu");
+      burger.onclick = () => nav.classList.toggle("open");
+    </script>
   </body>
 </html>
