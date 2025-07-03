@@ -22,6 +22,7 @@
             <li><a href="about_us.html">Über uns</a></li>
             <li><a href="formulare.html">Formulare</a></li>
             <li><a href="gallery.html">Pocket Gallery</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
           </ul>
         </div>
       </nav>
@@ -132,10 +133,38 @@
         <p>&copy; 2025 Meine Traumreiseziele. Mit Liebe zum Reisen erstellt.</p>
       </div>
     </footer>
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal">
+      <div class="login-modal-content">
+        <span class="close-modal" id="close-login">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="username">Benutzername:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Passwort:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+      </div>
+    </div>
     <script>
       const burger = document.getElementById("burger-menu");
       const nav = document.getElementById("nav-menu");
-      burger.onclick = () => nav.classList.toggle("open");
+      if (burger && nav) burger.onclick = () => nav.classList.toggle("open");
+
+      const loginBtn = document.querySelector(".login-btn");
+      const loginModal = document.getElementById("login-modal");
+      const closeLogin = document.getElementById("close-login");
+      if (loginBtn && loginModal && closeLogin) {
+        loginBtn.onclick = (e) => {
+          e.preventDefault();
+          loginModal.style.display = "flex";
+        };
+        closeLogin.onclick = () => (loginModal.style.display = "none");
+        window.onclick = (e) => {
+          if (e.target === loginModal) loginModal.style.display = "none";
+        };
+      }
     </script>
   </body>
 </html>

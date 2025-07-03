@@ -38,8 +38,11 @@ header {
 
 .logo {
   color: white;
+  height: 70px;
   font-size: 1.8rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu {
@@ -64,6 +67,31 @@ header {
 
 .nav-menu a.active {
   background-color: transparent;
+}
+
+/* Login Button Style im Nav-Menü */
+.nav-menu .login-btn {
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 24px;
+  padding: 10px 32px;
+  margin-left: 18px;
+  border: 3px solid #fff;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.nav-menu .login-btn:hover,
+.nav-menu .login-btn:focus {
+  background: #fff;
+  color: #764ba2;
+  border: 3px solid #764ba2;
+  text-decoration: none;
 }
 
 /* Hero Section */
@@ -1387,4 +1415,75 @@ label input[type="text"] {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
   }
+}
+
+/* Login Button Style */
+.login-btn {
+  background: #fff;
+  color: #667eea;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 8px 18px;
+  margin-left: 10px;
+  border: 2px solid #667eea;
+  transition: background 0.2s, color 0.2s;
+}
+.login-btn:hover {
+  background: #667eea;
+  color: #fff;
+}
+
+/* Login Modal Styles */
+.login-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+.login-modal-content {
+  background: #fff;
+  padding: 30px 25px 20px 25px;
+  border-radius: 16px;
+  max-width: 350px;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login-modal-content h2 {
+  color: #667eea;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.login-modal-content label {
+  margin-bottom: 4px;
+  color: #333;
+  font-weight: 500;
+}
+.login-modal-content input[type="text"],
+.login-modal-content input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #e1e5e9;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+.close-modal {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  font-size: 1.5rem;
+  color: #667eea;
+  cursor: pointer;
+  font-weight: bold;
 }
