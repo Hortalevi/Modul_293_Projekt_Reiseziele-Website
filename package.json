@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
     "cpx": "^1.5.0",
     "css-minify": "^2.1.0",
     "html-minifier": "^4.0.0",
