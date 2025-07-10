@@ -1,3 +1,239 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Formulare - Meine Traumreiseziele</title><link rel="stylesheet" href="styles.css"></head><body><header><nav><div class="nav-container"><h1 class="logo">Reiseziele</h1><div class="burger" id="burger-menu"><span></span> <span></span> <span></span></div><ul class="nav-menu" id="nav-menu"><li><a href="index.html">Home</a></li><li><a href="destinations.html">Reiseziele</a></li><li><a href="about_us.html">Über uns</a></li><li><a href="formulare.html" class="active">Formulare</a></li><li><a href="gallery.html">Pocket Gallery</a></li><li><a href="#" class="login-btn">Login</a></li></ul></div></nav></header><main><section class="formulare-hero"><div class="hero-content"><h1>Formulare</h1><p class="hero-subtitle">Interaktive Formulare und Umfragen</p></div></section><section class="form-section"><div class="container"><h2>Übung 1 – Lieblingsspiele</h2><form action="#" method="post"><fieldset><legend>Welches ist Ihr aktuelles Lieblingsspiel?</legend><label><input type="radio" name="lieblingsspiel" value="Minecraft"> Minecraft</label><br><label><input type="radio" name="lieblingsspiel" value="Fortnite"> Fortnite</label><br><label><input type="radio" name="lieblingsspiel" value="League of Legends"> League of Legends</label><br><label><input type="radio" name="lieblingsspiel" value="The Witcher 3"> The Witcher 3</label><br><label><input type="radio" name="lieblingsspiel" value="Cyberpunk 2077"> Cyberpunk 2077</label><br><label><input type="radio" name="lieblingsspiel" value="Overwatch 2"> Overwatch 2</label><br><label><input type="radio" name="lieblingsspiel" value="Valorant"> Valorant</label><br><label><input type="radio" name="lieblingsspiel" value="GTA V"> GTA V</label><br><label><input type="radio" name="lieblingsspiel" value="Among Us"> Among Us</label><br><label><input type="radio" name="lieblingsspiel" value="Rocket League"> Rocket League</label><br><label><input type="radio" name="lieblingsspiel" value="none"> Ich spiele keine Spiele</label><br><label><input type="radio" name="lieblingsspiel" value="andere"> Andere: <input type="text" name="lieblingsspiel_andere" placeholder="Spiel eingeben"></label></fieldset><fieldset><legend>Welche dieser Spiele spielen Sie regelmässig?</legend><label><input type="checkbox" name="spiele[]" value="Minecraft"> Minecraft</label><br><label><input type="checkbox" name="spiele[]" value="Fortnite"> Fortnite</label><br><label><input type="checkbox" name="spiele[]" value="League of Legends"> League of Legends</label><br><label><input type="checkbox" name="spiele[]" value="The Witcher 3"> The Witcher 3</label><br><label><input type="checkbox" name="spiele[]" value="Cyberpunk 2077"> Cyberpunk 2077</label><br><label><input type="checkbox" name="spiele[]" value="Overwatch 2"> Overwatch 2</label><br><label><input type="checkbox" name="spiele[]" value="Valorant"> Valorant</label><br><label><input type="checkbox" name="spiele[]" value="GTA V"> GTA V</label><br><label><input type="checkbox" name="spiele[]" value="Among Us"> Among Us</label><br><label><input type="checkbox" name="spiele[]" value="Rocket League"> Rocket League</label><br><label><input type="checkbox" name="spiele[]" value="none"> Ich spiele keine Spiele</label><br><label><input type="checkbox" name="spiele[]" value="andere"> Andere: <input type="text" name="spiele_andere" placeholder="Spiel eingeben"></label></fieldset><button type="submit">Absenden</button></form></div></section><section class="form-section"><div class="container"><h2>Übung 2 – Demographische Daten</h2><form action="#" method="post"><fieldset><legend>Demografische Daten</legend><label for="alter">Alter:</label> <input type="number" name="alter" id="alter" min="10" max="100"><br><label for="geschlecht">Geschlecht:</label> <select name="geschlecht" id="geschlecht"><optgroup label="Standardoptionen"><option value="maennlich">Männlich</option><option value="weiblich">Weiblich</option></optgroup><optgroup label="Weitere Optionen"><option value="divers">Divers</option><option value="keine_angabe">Keine Angabe</option></optgroup></select><br><label for="bildung">Bildungsstand:</label> <select name="bildung" id="bildung"><optgroup label="Schulbildung"><option value="hauptschule">Hauptschule</option><option value="realschule">Realschule</option><option value="abitur">Abitur</option></optgroup><optgroup label="Hochschulbildung"><option value="bachelor">Bachelor</option><option value="master">Master</option><option value="promotion">Promotion</option></optgroup></select></fieldset><button type="submit">Absenden</button></form></div></section><section class="form-section"><div class="container"><h2>Übung 3 – Bilder hochladen</h2><form action="#" method="post" enctype="multipart/form-data"><label for="bild">Wählen Sie ein Bild aus:</label><br><input type="file" name="bild" id="bild" accept="image/*"><br><br><button type="submit">Bild hochladen</button></form></div></section></main><footer><div class="container"><p>&copy; 2025 Meine Traumreiseziele. Mit Liebe zum Reisen erstellt.</p></div></footer><!-- Login Modal --><div id="login-modal" class="login-modal"><div class="login-modal-content"><span class="close-modal" id="close-login">&times;</span><h2>Login</h2><form><label for="username">Benutzername:</label> <input type="text" id="username" name="username" required> <label for="password">Passwort:</label> <input type="password" id="password" name="password" required> <button type="submit" class="submit-btn">Login</button></form></div></div><script>const burger = document.getElementById("burger-menu");
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Formulare - Meine Traumreiseziele</title>
+    <link rel="stylesheet" href="styles.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <h1 class="logo">Reiseziele</h1>
+          <div class="burger" id="burger-menu">
+            <span></span> <span></span> <span></span>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Reiseziele</a></li>
+            <li><a href="about_us.html">Über uns</a></li>
+            <li><a href="formulare.html" class="active">Formulare</a></li>
+            <li><a href="gallery.html">Pocket Gallery</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="formulare-hero">
+        <div class="hero-content">
+          <h1>Formulare</h1>
+          <p class="hero-subtitle">Interaktive Formulare und Umfragen</p>
+        </div>
+      </section>
+      <section class="form-section">
+        <div class="container">
+          <h2>Übung 1 – Lieblingsspiele</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Welches ist Ihr aktuelles Lieblingsspiel?</legend>
+              <label
+                ><input type="radio" name="lieblingsspiel" value="Minecraft" />
+                Minecraft</label
+              ><br /><label
+                ><input type="radio" name="lieblingsspiel" value="Fortnite" />
+                Fortnite</label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="lieblingsspiel"
+                  value="League of Legends"
+                />
+                League of Legends</label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="lieblingsspiel"
+                  value="The Witcher 3"
+                />
+                The Witcher 3</label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="lieblingsspiel"
+                  value="Cyberpunk 2077"
+                />
+                Cyberpunk 2077</label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="lieblingsspiel"
+                  value="Overwatch 2"
+                />
+                Overwatch 2</label
+              ><br /><label
+                ><input type="radio" name="lieblingsspiel" value="Valorant" />
+                Valorant</label
+              ><br /><label
+                ><input type="radio" name="lieblingsspiel" value="GTA V" /> GTA
+                V</label
+              ><br /><label
+                ><input type="radio" name="lieblingsspiel" value="Among Us" />
+                Among Us</label
+              ><br /><label
+                ><input
+                  type="radio"
+                  name="lieblingsspiel"
+                  value="Rocket League"
+                />
+                Rocket League</label
+              ><br /><label
+                ><input type="radio" name="lieblingsspiel" value="none" /> Ich
+                spiele keine Spiele</label
+              ><br /><label
+                ><input type="radio" name="lieblingsspiel" value="andere" />
+                Andere:
+                <input
+                  type="text"
+                  name="lieblingsspiel_andere"
+                  placeholder="Spiel eingeben"
+              /></label>
+            </fieldset>
+            <fieldset>
+              <legend>Welche dieser Spiele spielen Sie regelmässig?</legend>
+              <label
+                ><input type="checkbox" name="spiele[]" value="Minecraft" />
+                Minecraft</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="Fortnite" />
+                Fortnite</label
+              ><br /><label
+                ><input
+                  type="checkbox"
+                  name="spiele[]"
+                  value="League of Legends"
+                />
+                League of Legends</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="The Witcher 3" />
+                The Witcher 3</label
+              ><br /><label
+                ><input
+                  type="checkbox"
+                  name="spiele[]"
+                  value="Cyberpunk 2077"
+                />
+                Cyberpunk 2077</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="Overwatch 2" />
+                Overwatch 2</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="Valorant" />
+                Valorant</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="GTA V" /> GTA
+                V</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="Among Us" />
+                Among Us</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="Rocket League" />
+                Rocket League</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="none" /> Ich
+                spiele keine Spiele</label
+              ><br /><label
+                ><input type="checkbox" name="spiele[]" value="andere" />
+                Andere:
+                <input
+                  type="text"
+                  name="spiele_andere"
+                  placeholder="Spiel eingeben"
+              /></label>
+            </fieldset>
+            <button type="submit">Absenden</button>
+          </form>
+        </div>
+      </section>
+      <section class="form-section">
+        <div class="container">
+          <h2>Übung 2 – Demographische Daten</h2>
+          <form action="#" method="post">
+            <fieldset>
+              <legend>Demografische Daten</legend>
+              <label for="alter">Alter:</label>
+              <input
+                type="number"
+                name="alter"
+                id="alter"
+                min="10"
+                max="100"
+              /><br /><label for="geschlecht">Geschlecht:</label>
+              <select name="geschlecht" id="geschlecht">
+                <optgroup label="Standardoptionen">
+                  <option value="maennlich">Männlich</option>
+                  <option value="weiblich">Weiblich</option>
+                </optgroup>
+                <optgroup label="Weitere Optionen">
+                  <option value="divers">Divers</option>
+                  <option value="keine_angabe">Keine Angabe</option>
+                </optgroup></select
+              ><br /><label for="bildung">Bildungsstand:</label>
+              <select name="bildung" id="bildung">
+                <optgroup label="Schulbildung">
+                  <option value="hauptschule">Hauptschule</option>
+                  <option value="realschule">Realschule</option>
+                  <option value="abitur">Abitur</option>
+                </optgroup>
+                <optgroup label="Hochschulbildung">
+                  <option value="bachelor">Bachelor</option>
+                  <option value="master">Master</option>
+                  <option value="promotion">Promotion</option>
+                </optgroup>
+              </select>
+            </fieldset>
+            <button type="submit">Absenden</button>
+          </form>
+        </div>
+      </section>
+      <section class="form-section">
+        <div class="container">
+          <h2>Übung 3 – Bilder hochladen</h2>
+          <form action="#" method="post" enctype="multipart/form-data">
+            <label for="bild">Wählen Sie ein Bild aus:</label><br /><input
+              type="file"
+              name="bild"
+              id="bild"
+              accept="image/*"
+            /><br /><br /><button type="submit">Bild hochladen</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Meine Traumreiseziele. Mit Liebe zum Reisen erstellt.</p>
+      </div>
+    </footer>
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal">
+      <div class="login-modal-content">
+        <span class="close-modal" id="close-login">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="username">Benutzername:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Passwort:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const burger = document.getElementById("burger-menu");
       const nav = document.getElementById("nav-menu");
-      if (burger && nav) burger.onclick = () => nav.classList.toggle("open");</script></body></html>
+      if (burger && nav) burger.onclick = () => nav.classList.toggle("open");
+    </script>
+  </body>
+</html>

@@ -1,4 +1,147 @@
-<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reiseziele - Meine Traumreiseziele</title><link rel="stylesheet" href="styles.css"></head><body><header><nav><div class="nav-container"><h1 class="logo">Reiseziele</h1><div class="burger" id="burger-menu"><span></span> <span></span> <span></span></div><ul class="nav-menu" id="nav-menu"><li><a href="index.html">Home</a></li><li><a href="destinations.html" class="active">Reiseziele</a></li><li><a href="about_us.html">Über uns</a></li><li><a href="formulare.html">Formulare</a></li><li><a href="gallery.html">Pocket Gallery</a></li><li><a href="#" class="login-btn">Login</a></li></ul></div></nav></header><main><section class="destinations-hero"><div class="container"><h1>Meine Traumreiseziele</h1><p>Drei aussergewöhnliche Orte, die ich unbedingt besuchen möchte</p></div></section><section class="destinations-grid"><div class="container"><div class="grid"><div class="destination-card"><div class="card-image"><img src="./bilder/madeira.jpg" alt="Madeira Landschaft"></div><div class="card-content"><h3>Madeira, Portugal</h3><p class="location">🌍 Atlantischer Ozean</p><p class="description">Die "Insel des ewigen Frühlings" verzaubert mit dramatischen Klippen, üppigen Lorbeerwäldern und einer einzigartigen Levada-Wanderkultur.</p><div class="highlights"><h4>Highlights:</h4><ul><li>Levada-Wanderungen durch Urwälder</li><li>Cabo Girão - Europas höchste Klippe</li><li>Funchal's bunte Märkte</li><li>Madeira-Wein Verkostungen</li></ul></div><div class="fun-fact"><strong>Fun Fact:</strong> Madeira hat über 1.000km Levadas (Bewässerungskanäle), die als Wanderwege genutzt werden!</div></div></div><div class="destination-card"><div class="card-image"><img src="./bilder/bali_tempel.jpg" alt="Bali Tempel"></div><div class="card-content"><h3>Bali, Indonesien</h3><p class="location">🌍 Südostasien</p><p class="description">Die "Insel der Götter" bietet eine perfekte Mischung aus spiritueller Kultur, tropischen Stränden und atemberaubenden Reisterrassen.</p><div class="highlights"><h4>Highlights:</h4><ul><li>Jatiluwih Reisterrassen</li><li>Tanah Lot Tempel bei Sonnenuntergang</li><li>Ubud's Affenwald</li><li>Traditionelle Balinese Spa-Behandlungen</li></ul></div><div class="fun-fact"><strong>Fun Fact:</strong> Bali hat über 20.000 Tempel und Schreine - das sind mehr als Einwohner in manchen Dörfern!</div></div></div><div class="destination-card"><div class="card-image"><img src="./bilder/panama_city.jpg" alt="Panama City Skyline"></div><div class="card-content"><h3>Panama City, Panama</h3><p class="location">🌍 Zentralamerika</p><p class="description">Eine faszinierende Mischung aus kolonialer Geschichte und moderner Architektur, verbunden durch den berühmten Panamakanal.</p><div class="highlights"><h4>Highlights:</h4><ul><li>Panamakanal und Miraflores Schleusen</li><li>Casco Viejo - UNESCO Weltkulturerbe</li><li>Moderne Skyline von Punta Pacifica</li><li>Mercado de Mariscos für frische Meeresfrüchte</li></ul></div><div class="fun-fact"><strong>Fun Fact:</strong> Panama City ist die einzige Hauptstadt der Welt, die einen Regenwald innerhalb ihrer Stadtgrenzen hat!</div></div></div></div></div></section></main><footer><div class="container"><p>&copy; 2025 Meine Traumreiseziele. Mit Liebe zum Reisen erstellt.</p></div></footer><!-- Login Modal --><div id="login-modal" class="login-modal"><div class="login-modal-content"><span class="close-modal" id="close-login">&times;</span><h2>Login</h2><form><label for="username">Benutzername:</label> <input type="text" id="username" name="username" required> <label for="password">Passwort:</label> <input type="password" id="password" name="password" required> <button type="submit" class="submit-btn">Login</button></form></div></div><script>const burger = document.getElementById("burger-menu");
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reiseziele - Meine Traumreiseziele</title>
+    <link rel="stylesheet" href="styles.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <h1 class="logo">Reiseziele</h1>
+          <div class="burger" id="burger-menu">
+            <span></span> <span></span> <span></span>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html" class="active">Reiseziele</a></li>
+            <li><a href="about_us.html">Über uns</a></li>
+            <li><a href="formulare.html">Formulare</a></li>
+            <li><a href="gallery.html">Pocket Gallery</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="destinations-hero">
+        <div class="container">
+          <h1>Meine Traumreiseziele</h1>
+          <p>Drei aussergewöhnliche Orte, die ich unbedingt besuchen möchte</p>
+        </div>
+      </section>
+      <section class="destinations-grid">
+        <div class="container">
+          <div class="grid">
+            <div class="destination-card">
+              <div class="card-image">
+                <img src="./bilder/madeira.jpg" alt="Madeira Landschaft" />
+              </div>
+              <div class="card-content">
+                <h3>Madeira, Portugal</h3>
+                <p class="location">🌍 Atlantischer Ozean</p>
+                <p class="description">
+                  Die "Insel des ewigen Frühlings" verzaubert mit dramatischen
+                  Klippen, üppigen Lorbeerwäldern und einer einzigartigen
+                  Levada-Wanderkultur.
+                </p>
+                <div class="highlights">
+                  <h4>Highlights:</h4>
+                  <ul>
+                    <li>Levada-Wanderungen durch Urwälder</li>
+                    <li>Cabo Girão - Europas höchste Klippe</li>
+                    <li>Funchal's bunte Märkte</li>
+                    <li>Madeira-Wein Verkostungen</li>
+                  </ul>
+                </div>
+                <div class="fun-fact">
+                  <strong>Fun Fact:</strong> Madeira hat über 1.000km Levadas
+                  (Bewässerungskanäle), die als Wanderwege genutzt werden!
+                </div>
+              </div>
+            </div>
+            <div class="destination-card">
+              <div class="card-image">
+                <img src="./bilder/bali_tempel.jpg" alt="Bali Tempel" />
+              </div>
+              <div class="card-content">
+                <h3>Bali, Indonesien</h3>
+                <p class="location">🌍 Südostasien</p>
+                <p class="description">
+                  Die "Insel der Götter" bietet eine perfekte Mischung aus
+                  spiritueller Kultur, tropischen Stränden und atemberaubenden
+                  Reisterrassen.
+                </p>
+                <div class="highlights">
+                  <h4>Highlights:</h4>
+                  <ul>
+                    <li>Jatiluwih Reisterrassen</li>
+                    <li>Tanah Lot Tempel bei Sonnenuntergang</li>
+                    <li>Ubud's Affenwald</li>
+                    <li>Traditionelle Balinese Spa-Behandlungen</li>
+                  </ul>
+                </div>
+                <div class="fun-fact">
+                  <strong>Fun Fact:</strong> Bali hat über 20.000 Tempel und
+                  Schreine - das sind mehr als Einwohner in manchen Dörfern!
+                </div>
+              </div>
+            </div>
+            <div class="destination-card">
+              <div class="card-image">
+                <img src="./bilder/panama_city.jpg" alt="Panama City Skyline" />
+              </div>
+              <div class="card-content">
+                <h3>Panama City, Panama</h3>
+                <p class="location">🌍 Zentralamerika</p>
+                <p class="description">
+                  Eine faszinierende Mischung aus kolonialer Geschichte und
+                  moderner Architektur, verbunden durch den berühmten
+                  Panamakanal.
+                </p>
+                <div class="highlights">
+                  <h4>Highlights:</h4>
+                  <ul>
+                    <li>Panamakanal und Miraflores Schleusen</li>
+                    <li>Casco Viejo - UNESCO Weltkulturerbe</li>
+                    <li>Moderne Skyline von Punta Pacifica</li>
+                    <li>Mercado de Mariscos für frische Meeresfrüchte</li>
+                  </ul>
+                </div>
+                <div class="fun-fact">
+                  <strong>Fun Fact:</strong> Panama City ist die einzige
+                  Hauptstadt der Welt, die einen Regenwald innerhalb ihrer
+                  Stadtgrenzen hat!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Meine Traumreiseziele. Mit Liebe zum Reisen erstellt.</p>
+      </div>
+    </footer>
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal">
+      <div class="login-modal-content">
+        <span class="close-modal" id="close-login">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="username">Benutzername:</label>
+          <input type="text" id="username" name="username" required />
+          <label for="password">Passwort:</label>
+          <input type="password" id="password" name="password" required />
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      const burger = document.getElementById("burger-menu");
       const nav = document.getElementById("nav-menu");
       if (burger && nav) burger.onclick = () => nav.classList.toggle("open");
 
@@ -14,4 +157,7 @@
         window.onclick = (e) => {
           if (e.target === loginModal) loginModal.style.display = "none";
         };
-      }</script></body></html>
+      }
+    </script>
+  </body>
+</html>
