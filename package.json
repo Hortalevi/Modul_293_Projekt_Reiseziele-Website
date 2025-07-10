@@ -4,10 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "minify-html": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html",
-    "minify-css": "css-minify -d ./src -o ./dist",
-    "copy-images": "cpx \"src/bilder/**/*.*\" dist/bilder",
-    "build": "npm run minify-html && npm run minify-css && npm run copy-images",
+    "build": "npx html-minifier-terser --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html && npx css-minify -d ./src -o ./dist && npx cpx \"src/bilder/**/*.*\" dist/bilder",
     "deploy": "echo \"Hier käme dein FTP-Deploy-Befehl hin\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +15,7 @@
   "devDependencies": {
     "cpx": "^1.5.0",
     "css-minify": "^2.1.0",
-    "html-minifier": "^4.0.0",
+    "html-minifier-terser": "^7.2.0",
     "rimraf": "^6.0.1"
   }
 }
