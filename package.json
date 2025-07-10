@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "npx html-minifier-terser --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html && npx css-minify -d ./src -o ./dist && npx cpx \"src/bilder/**/*.*\" dist/bilder",
+    "build": "node build.js",
     "deploy": "echo \"Hier käme dein FTP-Deploy-Befehl hin\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
