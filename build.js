@@ -1,17 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 const { minify } = require("html-minifier-terser");
-const cssminify = require("css-minify");
+const CleanCSS = require("clean-css");
 const cpx = require("cpx");
 
 const inputDir = path.join(__dirname, "src");
 const outputDir = path.join(__dirname, "dist");
 
-// Make sure dist exists
+// Clear old dist folder
 fs.rmSync(outputDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
 
-// HTML Minification
+// Minify HTML files
 const htmlFiles = fs.readdirSync(inputDir).filter((f) => f.endsWith(".html"));
 htmlFiles.forEach(async (file) => {
   const srcPath = path.join(inputDir, file);
@@ -26,11 +26,15 @@ htmlFiles.forEach(async (file) => {
   fs.writeFileSync(destPath, result);
 });
 
-// CSS Minification
-cssminify.minify({
-  src: path.join(inputDir, "styles.css"),
-  dest: outputDir,
-});
+// Minify CSS using clean-css
+const cssInputPath = path.join(inputDir, "styles.css");
+const cssOutputPath = path.join(outputDir, "styles.css");
+
+if (fs.existsSync(cssInputPath)) {
+  const cssContent = fs.readFileSync(cssInputPath, "utf8");
+  const minifiedCSS = new CleanCSS().minify(cssContent);
+  fs.writeFileSync(cssOutputPath, minifiedCSS.styles);
+}
 
 // Copy images
 cpx.copy("src/bilder/**/*.*", path.join(outputDir, "bilder"), (err) => {

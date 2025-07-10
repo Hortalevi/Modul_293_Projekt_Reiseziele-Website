@@ -1,6 +1,7 @@
 {
   "name": "modul_293_projekt_reiseziele-website",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
@@ -11,11 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
+    "clean-css": "^5.3.3",
     "cpx": "^1.5.0",
-    "css-minify": "^2.1.0",
-    "html-minifier-terser": "^7.2.0",
-    "rimraf": "^6.0.1"
+    "html-minifier-terser": "^7.2.0"
   }
 }
