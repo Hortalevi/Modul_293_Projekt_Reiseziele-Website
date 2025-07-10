@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "npx html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html && npx css-minify -d ./src -o ./dist && npx cpx \"src/bilder/**/*.*\" dist/bilder",
+    "build": "html-minifier --input-dir ./src --output-dir ./dist --collapse-whitespace --file-ext html && css-minify -d ./src -o ./dist && cpx \"src/bilder/**/*.*\" dist/bilder",
     "deploy": "echo \"Hier käme dein FTP-Deploy-Befehl hin\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,12 +12,10 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
+  "devDependencies": {
     "cpx": "^1.5.0",
     "css-minify": "^2.1.0",
-    "html-minifier": "^4.0.0"
-  },
-  "devDependencies": {
+    "html-minifier": "^4.0.0",
     "rimraf": "^6.0.1"
   }
 }
