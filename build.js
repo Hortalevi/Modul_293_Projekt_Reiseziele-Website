@@ -40,3 +40,13 @@ if (fs.existsSync(cssInputPath)) {
 cpx.copy("src/bilder/**/*.*", path.join(outputDir, "bilder"), (err) => {
   if (err) console.error("Image copy failed:", err);
 });
+
+// Copy videos (e.g. mp4 files)
+cpx.copy("src/**/*.mp4", path.join(outputDir), (err) => {
+  if (err) console.error("Video copy failed:", err);
+});
+
+// Copy subtitles (e.g. vtt files)
+cpx.copy("src/**/*.vtt", path.join(outputDir), (err) => {
+  if (err) console.error("Subtitle copy failed:", err);
+});
