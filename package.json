@@ -15,7 +15,9 @@
   "dependencies": {
     "cpx": "^1.5.0",
     "css-minify": "^2.1.0",
-    "html-minifier": "^4.0.0",
+    "html-minifier": "^4.0.0"
+  },
+  "devDependencies": {
     "rimraf": "^6.0.1"
   }
 }
